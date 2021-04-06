@@ -627,7 +627,7 @@ function setPlayer( id ) {
                         <div class="ani_02_btn"><a href="#">code view</a></div>
                     </div>
                 </div>
-                <div class="sec5-4" data-47900="opacity:0;" data-48000="opacity:1;"> 
+                <div class="sec5-4" data-47900="opacity:0;" data-48000="opacity:1;" data-49800 = "top:0%" data-50600="top:-100%;"> 
                     <div class="ani_03" 
                         data-48400 = "opacity:0; transform: translate(-50%,-50%) scale(0.2);"
                         data-48800 = "opacity:1; transform: translate(-50%,-50%) scale(1.3);"
@@ -635,9 +635,27 @@ function setPlayer( id ) {
                         data-49600 = "opacity:1; transform: translate(-100%,-50%) scale(1);"
                     >
                         <!-- <p>KimSangHee</p> -->
-                        <div class="ocean">
-                            <div class="wave"></div>
-                            <div class="wave"></div>
+                        <div class="header_w">
+
+                            <h1 class="wave_t flex">Kim Sang Hee</h1>
+                            <!--Waves Container-->
+                            <div>
+                                <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+                                    <defs>
+                                        <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+                                    </defs>
+                                    <g class="parallax">
+                                        <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
+                                        <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+                                        <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+                                        <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+                                    </g>
+                                </svg>
+                            </div>
+                            <!--Waves end-->
+                        </div>
+                        <div class="content_01 flex">
                         </div>
                     </div> 
                     <div class="ani_01_txt" data-49200="opacity:0; transform: translate(150%,-50%); filter:blur(5px);" data-49600="opacity:1; transform:translate(25%,-50%); filter:blur(0px);">
