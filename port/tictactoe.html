@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+       <!-- highlightJs.css -->
+       <link rel="preconnect" href="https://fonts.gstatic.com">
+       <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <title>tictactoe</title>
+    <style>
+ *{padding: 0; margin: 0;}
+        body {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background:url(assets/img/cookie_run.jpg)no-repeat center;
+            background-size:cover;
+        }
+
+        td {
+            width: 12vw; height: 12vw;
+            border: 1px solid #000;
+            text-align: center;
+            font-weight: bold;
+            font-size: 5vw;
+            background: rgba(255, 255, 255, 0.7);
+        }
+        div {
+            position: relative;
+            margin-top: -50px;
+        }
+        p {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(135, 205, 185, 0.6);
+            position: absolute;
+            top: 0;  
+            font-family: 'Lobster', cursive;
+            font-size: 5vw;
+        }
+        
+        #reset {
+            width: 150px; height: 36px;
+            position: absolute;
+            bottom: -50px;
+            z-index: 99;
+        }
+    </style>
+</head>
+<body>
+        <button id="reset">Reset</button>
+    <script>
+
+var body = document.body,
+    container = document.createElement('div'),
+    table = document.createElement('table'),
+    btn = document.getElementById('reset'),
+    blocks = [],
+    lines = [],
+    turn = "X",
+    result = document.createElement('p');
+
+result.style.display="none";
+var asCallback = function(ev){
+
+    var whatLine = lines.indexOf(ev.target.parentNode);
+    console.log("whatLine", whatLine);
+    var whatBlock = blocks[whatLine].indexOf(ev.target);
+    console.log("whatBlock", whatBlock);
+
+    if (blocks[whatLine][whatBlock].textContent !== ""){ 
+        console.log("鍮덉뭏�� �꾨떃�덈떎.")
+    } else { 
+        blocks[whatLine][whatBlock].textContent = turn;
+
+
+        var fill = false;
+
+        if (
+            blocks[whatLine][0].textContent === turn &&
+            blocks[whatLine][1].textContent === turn &&
+            blocks[whatLine][2].textContent === turn 
+        ){
+            fill = true;
+        }
+
+         if (
+            blocks[0][whatBlock].textContent === turn &&
+            blocks[1][whatBlock].textContent === turn &&
+            blocks[2][whatBlock].textContent === turn 
+        ){
+            fill = true;
+        }
+
+        if (whatLine - whatBlock === 0){ 
+            if (
+                blocks[0][0].textContent === turn &&
+                blocks[1][1].textContent === turn &&
+                blocks[2][2].textContent === turn 
+            ){
+                fill = true;
+            }
+        }
+        if (Math.abs(whatLine - whatBlock) === 2){ 
+            if (
+                blocks[0][2].textContent === turn &&
+                blocks[1][1].textContent === turn &&
+                blocks[2][0].textContent === turn 
+            ){
+                fill = true;
+            }
+        }
+
+        if(fill){
+            result.style.display="flex";
+            result.textContent = "Player" + turn + " WIN";
+
+            turn = 'X';
+            blocks.forEach(function (line) {
+                line.forEach(function (block) {
+                    block.textContent = '';
+                });
+            });
+        } else{ 
+            result.style.display="none";
+            if(turn === "X"){
+                turn = "O";
+            } else {
+                turn = "X";
+            }
+        }
+    }
+};
+for (var i = 1; i<=3; i+=1){
+    var line = document.createElement('tr');
+    lines.push(line);
+    blocks.push([]);
+    for (var j = 1; j <= 3; j += 1){
+        var block = document.createElement('td');
+        block.addEventListener('click', asCallback);
+        blocks[i - 1].push(block);
+        line.appendChild(block);
+    }
+    table.appendChild(line);
+}
+body.appendChild(container);
+container.appendChild(table);
+container.appendChild(btn);
+body.appendChild(result);
+// console.log(blocks);
+
+
+btn.addEventListener('click', function() {
+    turn = 'X';
+    result.style.display="none";
+    blocks.forEach(function (line) {
+        line.forEach(function (block) {
+            block.textContent = '';
+        });
+    });
+});
+
+
+
+
+    </script>
+</body>
+</html>
