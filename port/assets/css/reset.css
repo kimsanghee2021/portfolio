@@ -20,6 +20,13 @@ video {
 }
 
 
+
+/* img */
+img {
+  width: 100%;
+  margin:0 auto;
+}
+
 /* a 링크 초기화 */
 a {
   margin: 0;
@@ -34,7 +41,7 @@ a {
 }
 
 /* 폰트 초기화 */
-body, input, textarea, select, table {font-family: 'Montserrat', 'NanumSquare', sans-serif; font-size:16px;  color:#fff;}
+body, input, textarea, select, table {font-family: 'Montserrat', 'NanumSquare', sans-serif; font-size:1vw;  color:#fff;}
 body {line-height: 1; }
 
 
@@ -99,9 +106,24 @@ img, fieldset {border:0;}
     text-indent: -9999px;
 }/*대체 텍스트가 아닌 접근성을 위한 숨김 텍스트를 제공할 때*/
 
+/* 스크롤 */
+.scroll {
+  position: fixed;
+  right: 10px;
+  top: 10px;
+  border: 1px solid #888;
+  text-align: center;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  font-size: 13px;
+  color: #888;
+  z-index:7000;
+}
 
-
-
+body {
+  background: #212121;
+}
 
 /* padding, margin setting */
 .pt00 {padding-top: 0px !important;}
