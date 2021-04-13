@@ -118,7 +118,7 @@ img, fieldset {border:0;}
   line-height: 50px;
   font-size: 13px;
   color: #888;
-  z-index:7000;
+  z-index:100000;
 }
 
 body {
