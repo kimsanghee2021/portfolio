@@ -1,0 +1,399 @@
+/* section03 */
+.sec3{ 
+    height:100vh;
+    width:100vw; 
+    top:0; 
+    left:0; 
+    overflow:hidden;
+    background-color:#212121;
+}
+.sec3-1{ 
+    position:relative;
+    top:0;
+    right:0%; 
+    height:100vh; 
+    width:100vw;  
+}
+.sec3-1 .cont_left img{max-width:15vw;}
+
+.sec3-1 .cont_right{
+    position:absolute; 
+    background-color:#CDCDCD;
+    overflow:hidden; 
+    width:100vw; 
+    height:180vh; 
+    background-size: cover;
+    overflow:hidden;
+
+}
+.sec3-1 .cont_right img:first-child{
+    position:absolute;
+    top:50%; 
+    left:50%; 
+    transform: translate(-50%,-50%);
+     max-width: 40vw;
+     z-index: 3100;
+}
+.sec3-1 .cont_right img:last-child{
+    position:absolute;
+    top:50%; 
+    left:50%; 
+    transform: translate(-50%,-50%);
+    max-width: 40vw;
+    z-index: 3010;
+}
+.sec3-2{
+    background: linear-gradient( -45deg, #1D1E1F, #3F3F41 );  
+    position:relative;
+    height:250vh; 
+    width:100vw;  
+    color:#fff;
+    box-sizing: border-box;
+}
+.sec3-2 .container .mong_img_01{
+    max-width:100vw;
+}
+.mong_img_01 span{
+    display: block;
+}
+.sec3-2 .container .mong_img_02{
+    margin-top:6vh;
+    max-width:48vw;
+}
+.mong_img_02 span{
+    display: block;
+}
+/* 몽드로쉐 상세페이지 라인 */
+.mong_circle_line{
+    position:absolute;
+    width:8vw;
+    height:10vh;
+    bottom:8.5%;
+    right:27%;
+}
+.mong_circle_line > div:first-child{
+    display: block; 
+    width:7px; 
+    height:7px; 
+    background-color: #fff; 
+    border-radius:50%; 
+    position: absolute; 
+    top:0%; 
+    left:0%;
+}
+.mong_circle_line > div:nth-child(2){
+    border:0.3px solid #fff; 
+    width:46%; 
+    position:absolute; 
+    top:2%; 
+    left:2%;
+}
+
+.mong_circle_line > div:nth-child(3){
+    border:0.3px solid #fff; 
+    position:absolute; 
+    bottom:2%; 
+    left:48%; 
+    height:94%;
+}
+
+.mong_circle_line > div:nth-child(4){
+    border:0.3px solid #fff; 
+    width:46%; 
+    position:absolute; 
+    bottom:2%; 
+    right:4%;
+}
+.mong_circle_line > div:last-child{
+    display: block; 
+    width:7px; 
+    height:7px; 
+    background-color: #fff; 
+    border-radius:50%; 
+    position: absolute; 
+    bottom:-1%; 
+    right:0%;
+}
+.mong_img_02_right_text{
+    position: absolute;
+    width:18vw;
+    height:25vh;
+    bottom:0;
+    right:0;
+}
+.mong_img_02_right_text p:first-child{
+    font-size:1.5vw;
+    font-weight: 600;
+}
+.mong_img_02_right_text p:nth-child(2){
+    margin-top:7px;
+    font-size: 0.9vw;
+    line-height: 140%;
+}
+.mong_img_02_right_text p:nth-child(3){
+    font-size:1.5vw;
+    font-weight: 600;
+    margin-top:5vh;
+}
+.mong_img_02_right_text p:nth-child(4){
+    margin-top:7px;
+    font-size: 0.9vw;
+    line-height: 140%;
+}
+/* sec3-3 */
+.sec3-3{
+    position:relative;
+    top:0;
+    right:0%; 
+    height:100vh; 
+    width:100vw; 
+    background-color: #E5E5E5;
+    color:#000;
+    overflow: hidden;
+}
+.sec3-3_circle_01{
+    position:relative;
+    width:80vw;
+    background-color: #FAFAFA;
+    border-radius: 50%;
+    transform: translate(-50%,-50%);
+    top:50%;
+    left:50%;
+
+}
+.sec3-3_circle_01:after{
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+}  
+.sec3-3_circle_02{
+    position:absolute;
+    width:60vw;
+    background-color: #F6F6F6;
+    border-radius: 50%;
+    transform: translate(-50%,-50%);
+    top:50%;
+    left:50%;
+}
+.sec3-3_circle_02:after{
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+}  
+
+.sec3-3_circle_03{
+    position:absolute;
+    width:40vw;
+    background-color: #EEEEEE;
+    border-radius: 50%;
+    transform: translate(-50%,-50%);
+    top:50%;
+    left:50%;
+}
+.sec3-3_circle_03:after{
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+}  
+.sec3-3_frame_img{
+    position: absolute;
+    overflow:hidden;
+    width: 44vw;
+    height:50vh;
+    border:0.4vw solid #000;
+    background:#131313;
+    border-radius: 40px;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    overflow:hidden;
+    box-shadow: 5px 5px 50px rgba(0,0,0,0.3);
+}
+.sec3-3_frame_img span img{
+    width:100%;
+
+}
+.sec3-3_frame_img span{display: block;}
+
+/* sec4 */
+.sec4{ 
+    height:100vh;
+    width:100vw; 
+    top:0; 
+    left:0; 
+    overflow:hidden;
+    background: #212121;
+}
+.sec4-1{ 
+    position:relative;
+    top:0;
+    right:0%; 
+    height:100vh; 
+    width:100vw; 
+}
+
+.sec4-1 .cont_left img{max-width:15vw;}
+.sec4-1 .cont_right{
+    position:absolute; 
+    background: url(../img/mega_bg.png)no-repeat top center;
+    overflow:hidden; 
+    width:100vw; 
+    height:180vh; 
+    background-size: cover;
+    overflow:hidden;
+}
+
+.sec4-1 .cont_right img{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    max-width: 28vw;
+    display: block;
+    z-index: 41000;
+}
+.sec4-2{
+    top:0%;
+    left:0%;
+    width:100vw;
+    height:100vh;
+    position: relative;
+    overflow:hidden;
+    background-color: #fff;
+}
+.sec4-2 span{display: block;}
+
+.sec4-2 img:first-child{
+    max-width:65vw;
+    position: absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+    display: block;
+    z-index:4200;
+    display: block;
+}
+.sec4-2 img:nth-child(2){
+    max-width:30vw;
+    position: absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-40%,-40%);
+    display: block;
+    z-index:4210;
+}
+.sec4-2 img:nth-child(3){
+    max-width:15vw;
+    position: absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-100%,-15%);
+    display: block;
+    z-index:4220;
+}
+.sec4-2 .sec4-2_text{
+    position: absolute;
+    left:18%;
+    top:60%;
+    transform: translate(-50%,-50%);
+    width:25vw;
+    height:40vh;
+    z-index: 4300;
+}
+.sec4-2 .sec4-2_text p:first-child{
+    font-size: 2.5vw;
+    color:#000;
+    font-weight:600;
+}
+.sec4-2 .sec4-2_text p em{
+    font-size:1vw;
+    color:#000;
+    font-weight:100; margin-left:0.5vw;
+}
+.sec4-2 .sec4-2_text p:last-child{
+    margin-top:2vh;
+    font-size: 1vw;
+    color:#000;
+    font-weight:300;
+    line-height: 180%;
+}
+.sec4-3{
+    top:0%;
+    left:0%;
+    width:100vw;
+    height:100vh;
+    position: relative;
+    background-color: #F8F8F8;
+    z-index: 40003;
+}
+.sec4-3_box01 span{display: block;}
+.sec4-3_box01{
+    width:60vw;
+    position:relative;
+    top:50%;
+    left:50%;
+    transform: translate(-80%,-50%);
+    display: block;
+}
+.sec4-3_box01 .sec4-3_tab1{position: absolute; top:20%; left:50%; transform: translate(-50%,-50%); width:70%;}
+.sec4-3_box01 .sec4-3_tab1 span:first-child{position: absolute; top:0%;left:0%; z-index:4500;}
+.sec4-3_box01 .sec4-3_tab1 span:last-child{z-index:4300;position: absolute; top:0%;left:0%;}
+.sec4-3_box01 .sec4-3_tab2{
+    position: absolute; top:35%; left:50%; transform: translate(-50%,-50%); width:75%;
+}
+.sec4-3_box01 .sec4-3_tab2 span:first-child{position: absolute; top:0%;left:0%; z-index:4500;}
+.sec4-3_box01 .sec4-3_tab2 span:last-child{z-index:4300;position: absolute; top:0%;left:0%;}
+
+.sec4-3_box01 .sec4-3_tab3{position: absolute;top:50%; left:50%; transform: translate(-50%,-50%); width:80%;}
+
+.sec4-3 .sec4-3_text{
+    position: absolute;
+    top:25%;
+    right:-15%;
+    transform: translate(-50%,-50%);
+    width:34vw;
+    height:10vh;
+    color:#000;
+}
+.sec4-3 .sec4-3_text p:first-child{font-size:2vw; font-weight:600;}
+.sec4-3 .sec4-3_text p:last-child{font-size:1vw;margin-top:1.5vh; font-weight:100; line-height:180%;}
+.sec4-3_text_02{
+    position:absolute;
+    bottom:20%;
+    transform: translate(-50%,-50%);
+    right:-15%;
+    width:34vw;
+    height:30vh;
+    font-size: 0.7vw;
+    border-radius: 40%;
+}
+.sec4-4{
+    top:0%;
+    left:0%;
+    width:100vw;
+    height:100vh;
+    position: relative;
+    background-color:#fff;
+    z-index: 40002;
+}
+.sec4-4 .sec4-4_text{
+    position: absolute;
+    top:30%;
+    right:-15%;
+    transform: translate(-50%,-50%);
+    width:34vw;
+    height:10vh;
+    color:#000;
+}
+.sec4-4 .sec4-4_text p:first-child{font-size:2vw; font-weight:600;}
+.sec4-4 .sec4-4_text p:last-child{font-size:1vw;margin-top:1.5vh; font-weight:100; line-height:180%;}
+.sec4-4 .sec4-4_text_02{
+    position:absolute;
+    bottom:13%;
+    transform: translate(-50%,-50%);
+    right:-15%;
+    width:34vw;
+    height:30vh;
+    font-size: 0.7vw;
+    border-radius: 40%;
+}

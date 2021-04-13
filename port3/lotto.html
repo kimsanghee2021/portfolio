@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로또 추첨기</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            width:100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background:#92a3b5 url(assets/img/lotto_bg.jpg) no-repeat center;
+            
+            background-size:cover;
+        }
+        h1 {
+            position: absolute;
+            top: 17%;
+            font-size: 10vh;
+            color: #555;
+        }
+        span {
+            font-size:5vh;
+            font-weight: bold;
+            padding: 1vw 0;
+            display: none;
+        }
+        #start {
+            padding: 1vw 2vw;
+            border: none;
+            font-size: 3vh;
+            font-weight: bold;
+            cursor: pointer;
+            background-color: #0b2e59;
+            color: #fff;
+            border-radius: 10px;
+            border:5px solid #0b2e59;
+            transition: all 0.3s ease;
+        }
+        #start:hover {
+            border:0;
+            background-color:#fff;
+            color: #0b2e59;
+        }
+        #result div, .bonus div {
+            display: inline-block;
+            width: 10vh;
+            height: 10vh;
+            line-height: 10vh;
+            border-radius: 50%;
+            text-align: center;
+            font-size:5vh;
+            margin: 0 0.3vw;
+            font-weight: bold;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <h1>로또 추첨기</h1>
+    <button id="start">시작하기</button>
+    <span>당첨 숫자</span>
+    <div id="result"></div>
+    <span>보너스</span>
+    <div class="bonus"></div>
+    <script>
+        const span = document.querySelectorAll("span");
+
+document.querySelector('#start').addEventListener('click', (e) => {
+e.preventDefault;
+document.querySelector('#start').style.display = 'none';
+span[0].style.display = 'block';
+// span.forEach( span => {
+//     span.style.display = 'block';
+// })
+
+//let candidate = Array(45);   //[]보통은 대괄호 너무 많을땐 Array라는 함수를 이용 empty는 완전히 빈값
+//mapping 맵
+let candidate = Array(45)
+    .fill()
+    .map((element, index) => {
+    return index + 1;
+});
+
+// console.log(candidate);
+
+let shuffle = [];
+while(candidate.length > 0) {
+    let movingValue = candidate.splice(Math.floor(Math.random() * candidate.length), 1)[0];
+    shuffle.push(movingValue);
+}
+
+//console.log(shuffle);
+
+let bonus = shuffle[shuffle.length - 1];
+let passNum = shuffle
+    .slice(0, 6)  //실제로는 0~5까지 자른다.
+    .sort((p, c) => { 
+        return p - c 
+    });
+
+//console.log('당첨숫자들',passNum,'보너스', bonus)
+
+
+let result = document.getElementById('result');
+
+ballColor = (num, result) => {
+    let ball = document.createElement('div');
+        ball.textContent = num;
+        let backColor;
+        if(num <= 10){
+            backColor = 'red';
+        } else if(num <= 20) {
+            backColor = 'orange';
+        } else if(num <= 30) {
+            backColor = 'yellowgreen';
+        } else if(num <= 40) {
+            backColor = 'blue';
+        } else {
+            backColor = 'green';
+        }
+        ball.style.backgroundColor = backColor;
+        result.appendChild(ball);
+}   
+    for (let i = 0; i < passNum.length; i++) {
+        (closure = (j) => {
+            setTimeout(callback = () => {
+                ballColor(passNum[j], result);
+            },(j + 1) * 1000); //밀리초
+        })(i);
+    }
+   
+    setTimeout(callback = () => {
+        span[1].style.display = 'block';
+        let column = document.getElementsByClassName('bonus')[0]
+        ballColor(bonus, column)
+    },7000);
+
+});
+    </script>
+</body>
+</html>
